@@ -24,3 +24,4 @@ Werkzeug==2.1.2
 zope.interface==5.4.0
 Flask-Cors==1.10.3
 Flask-Bcrypt==1.0.1
+python-dotenv==1.0.1
