@@ -8,6 +8,7 @@ from database import db
 
 blue_print = Blueprint('app', __name__)
 
+
 # Ruta de Inicio
 @blue_print.route('/', methods=['GET'])
 def holamundo():
@@ -15,7 +16,7 @@ def holamundo():
 
 
 # Registro de Usuario
-
+@cross_origin()
 @blue_print.route('/auth/registrar', methods=['POST'])
 def registrar_usuario():
     try:
@@ -53,7 +54,7 @@ def registrar_usuario():
 
 # Ruta para Iniciar Sesion
 
-
+@cross_origin()
 @blue_print.route('/auth/login', methods=['POST'])
 def iniciar_sesion():
     try:
@@ -82,7 +83,7 @@ def iniciar_sesion():
     except Exception as e:
         return jsonify(respuesta= e), 500
 
-
+@cross_origin()
 @blue_print.route('/auth/perfil', methods=['GET'])
 @jwt_required()
 def perfil():
