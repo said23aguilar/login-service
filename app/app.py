@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 jwt = JWTManager(app)
 
-CORS(app)
+
 
 load_dotenv()
 
