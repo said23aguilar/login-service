@@ -28,7 +28,7 @@ PORT_HOST = os.getenv("HOST_PORT")
 JWT_SECRET_API = os.getenv("JWT_SECRET")
 JWT_LOCATION_API = os.getenv("JWT_LOCATION")
 
-DB_URL = f'mysql+pymysql://{USUARIO}:{PASSWORD}@{HOST}:${PORT_HOST}/{NAME}'
+DB_URL = f'mysql+pymysql://{USUARIO}:{PASSWORD}@{HOST}:46513/{NAME}'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATION'] = False
